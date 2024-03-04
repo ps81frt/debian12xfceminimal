@@ -33,20 +33,20 @@ sudo apt install -y \
     qt5ct \
     git \
     htop \
-    fontconfig
-    fontconfig-config  \
-    fonts-dejavu-core \
-    fonts-dejavu-extra \
-    fonts-droid-fallback \
-    fonts-font-awesome \
-    fonts-lato \
-    fonts-liberation2 \
-    fonts-mathjax \
-    fonts-noto-mono \
-    fonts-opensymbol \
-    fonts-quicksand \
-    fonts-symbola \
-    fonts-urw-base35 \
+   #fontconfig
+   #fontconfig-config  \
+   #fonts-dejavu-core \
+   #fonts-dejavu-extra \
+   #fonts-droid-fallback \
+   #fonts-font-awesome \
+   #fonts-lato \
+   #fonts-liberation2 \
+   #fonts-mathjax \
+   #fonts-noto-mono \
+   #fonts-opensymbol \
+   #fonts-quicksand \
+   #fonts-symbola \
+   #fonts-urw-base35 \
     zsh-syntax-highlighting \
     zsh-autosuggestions \
     terminator 
