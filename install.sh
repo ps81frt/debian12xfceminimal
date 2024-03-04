@@ -1,14 +1,33 @@
 #!/bin/sh
 
+
+## configure and install minimal xfce desktop environment
+
+## check for sudo/root
+if ! [ $(id -u) = 0 ]; then
+  echo "This script must run with sudo, try again..."
+  exit 1
+fi
+
+cat ./xsessionrc >> /home/$SUDO_USER/.xsessionrc
+chown $SUDO_USER:$SUDO_USER /home/$SUDO_USER/.xsessionrc
+
+
 sudo apt update
 sudo apt upgrade -y
 
-cp -r .config ~
-cp .bashrc ~
-cp .nanorc ~
-cp .zshrc  ~
-cp .vimrc ~
-cp cleaner.sh ~
+
+cp config/user-dirs.dirs ~/.config/user-dirs.dirs
+
+mkdir ~/Documents
+mkdir ~/Downloads
+mkdir ~/Pictures
+mkdir ~/Music
+mkdir ~/Videos
+mkdir ~/Desktop
+mkdir ~/Templates
+mkdir ~/Public
+
 
 # https://wiki.debian.org/Xorg
 sudo dpkg-reconfigure keyboard-configuration
@@ -25,7 +44,6 @@ sudo apt install -y \
     xfce4-whiskermenu-plugin \
     xfce4-session \
     xfce4-settings \
-    xfce4-terminal \
     xfconf \
     xfdesktop4 \
     xfwm4 \
