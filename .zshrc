@@ -2,6 +2,9 @@
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000000
 SAVEHIST=$HISTSIZE
+setopt appendhistory
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 setopt EXTENDED_HISTORY
 
 # Raccourci application 
@@ -35,9 +38,10 @@ setopt EXTENDED_HISTORY
  alias lf="ls -l | egrep -v '^d'" # files only
  alias ldir="ls -l | egrep '^d'" # directories only
  alias free='free -m'                      # show sizes in MB
- alias lsblk='lsblk -o name,fstype,size,fsused,fsuse%,fsavail,UUID,label,mountpoint | grep -Ev "loop"'
- alias noyaux='sudo dpkg -l | grep -iE "linux-image-|linux-headers-"'
-
+ alias ..='cd ..'
+ alias ....='cd ../..'
+ alias ......='cd ../..'
+ alias logout='pkill -kill -u $(logname)'
 # Show current network information
 
 netinfo ()
@@ -76,6 +80,9 @@ ex ()
   fi
 }
 
+
 # Chargement de Starship
 eval "$(starship init zsh)"
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/sbin
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

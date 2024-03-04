@@ -3,7 +3,7 @@
 sudo apt update
 sudo apt upgrade -y
 
-cp .config ~
+cp -r .config ~
 cp .bashrc ~
 cp .nanorc ~
 cp .zshrc  ~
@@ -48,7 +48,8 @@ sudo apt install -y \
     fonts-symbola \
     fonts-urw-base35 \
     zsh-syntax-highlighting \
-    zsh-autosuggestions 
+    zsh-autosuggestions \
+    terminator 
 
 
 
@@ -128,4 +129,10 @@ echo "eval "'"$(starship init bash)"'"" >> ~/.bashrc
 # might be not necessary if you want to use the same locale for everything
 sudo update-locale LC_TIME=fr_FR.utf8 LC_PAPER=fr_FR.utf8 LC_NAME=fr_FR.utf8 LC_ADDRESS=fr_FR.utf8 LC_TELEPHONE=fr_FR.utf8 LC_MEASUREMENT=fr_FR.utf8
 setxkbmap fr
-chsh $(which zsh)
+cp -r .config ~
+cp .bashrc ~
+cp .nanorc ~
+cp .zshrc  ~
+cp .vimrc ~
+cp cleaner.sh ~
+chsh -s /usr/bin/zsh
