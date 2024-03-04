@@ -136,3 +136,4 @@ cp .zshrc  ~
 cp .vimrc ~
 cp cleaner.sh ~
 chsh -s /usr/bin/zsh
+reboot
