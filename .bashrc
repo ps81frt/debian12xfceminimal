@@ -117,6 +117,12 @@ fi
  alias lf="ls -l | egrep -v '^d'" # files only
  alias ldir="ls -l | egrep '^d'" # directories only
  alias free='free -m'                      # show sizes in MB
+ alias ..='cd ..'
+ alias ....='cd ../..'
+ alias ......='cd ../..'
+ alias logout='pkill -kill -u $(logname)'
+ alias python3='python'
+ alias pip3='pip'
  alias noyaux='sudo dpkg -l | grep -iE "linux-image-|linux-headers-"'
 # Show current network information
 

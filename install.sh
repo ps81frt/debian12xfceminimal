@@ -36,6 +36,7 @@ sudo dpkg-reconfigure keyboard-configuration
 sudo apt install -y \
     network-manager-gnome \
     zsh \
+    net-tools \
     libxfce4ui-utils \
     pcmanfm \
     xfce4-appfinder \
@@ -67,7 +68,7 @@ sudo apt install -y \
    #fonts-urw-base35 \
     zsh-syntax-highlighting \
     zsh-autosuggestions \
-    terminator 
+    terminator \
 
 
 

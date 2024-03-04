@@ -42,6 +42,8 @@ setopt EXTENDED_HISTORY
  alias ....='cd ../..'
  alias ......='cd ../..'
  alias logout='pkill -kill -u $(logname)'
+ alias python3='python'
+ alias pip3='pip'
 # Show current network information
 
 netinfo ()
